@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  body{
+     background-color: #000000;
+  }
+  
+  h3 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #ffffff;
+      padding: 20px;
+  }
+  
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+  
+  .wrapper .sidebar{
+    width: 200px;
+    height: 100%;
+    background: #110111;
+    padding: 30px 0px;
+    position: fixed;
+    border-right: 1px solid #e0e4e8;
+  }
+  
+  .wrapper .sidebar h2{
+    color: #F1E3E4;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .wrapper .sidebar h2 span {
+    color: #fff;
+    text-transform: uppercase;
+
+  }
+  
+  .wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }    
+  
+  .wrapper .sidebar ul li a{
+    color: #C44900;
+    display: block;
+  }
+  
+  .wrapper .sidebar ul li a .fas{
+    width: 25px;
+  }
+  
+  .wrapper .sidebar ul li:hover{
+    background-color: #594f8d;
+  }
+      
+  .wrapper .sidebar ul li:hover a{
+    color: #fff;
+  }
+  
+  .wrapper .main_content{
+    width: 100%;
+    margin-left: 200px;
+  }
+  
+  .wrapper .main_content .header{
+    padding: 20px;
+    background: #000000;
+    color: #C44900;
+    border-bottom: 1px solid #e0e4e8;
+  }
+  
+  .wrapper .main_content .info{
+    margin: 20px;
+    color: #C44900;
+    line-height: 25px;
+  }
+  
+  .wrapper .main_content .info div{
+    margin-bottom: 20px;
+  }
+  
+  /* MOVIE CARDS STYLE */
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 20px;
+    }
+    
+    .card {
+      width: calc(21.33% - 10px);
+      margin-bottom: 20px;
+      box-shadow: 1 6px 10px rgba(218, 135, 243, 0.76);
+      transition: box-shadow 0.3s ease-in-out;
+      background-color: #200320;
+    }
+    
+    .card:hover {
+      box-shadow: 0 20px 25px rgba(230, 213, 236, 0.863);
+    }
+    
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .card-title{
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #F1E3E4;
+    }
+    
+    .card-text {
+      font-size: 14px;
+      color: #C44900;
+      margin-bottom: 10px;
+    }
+  
+    .btn-primary {
+      display: inline-flex;
+      padding: 10px 30px;
+      background-color: #422040;
+      color: #fff;
+      border-radius: 5px;
+      margin: 20px 20px 20px 20px;
+      border-color: #200320;
+    }
+  
+    .btn-primary:hover {
+      background-color: #0c0414;
+      border-color: #470a96;
+    }
+  
