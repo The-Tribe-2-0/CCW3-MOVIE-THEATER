@@ -15,6 +15,27 @@ fetch('http://localhost:3000/films')
     link.textContent = movie.title;
     listItem.appendChild(link);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
+      // Remove the film from the server
+      fetch(`http://localhost:3000/films/${movie.id}`, {
+        method: 'DELETE'
+      })
+      .then(() => {
+        // Remove the film from the sidebar
+        sidebar.removeChild(listItem);
+        // Remove the film from the container
+        const cardToRemove = document.getElementById(`card-${movie.id}`);
+        container.removeChild(cardToRemove);
+        if (movie.capacity - movie.tickets_sold <= 0) {
+          listItem.classList.add('sold-out');
+        }
+      })
+      .catch(error => console.log(error));
+  });
+  listItem.appendChild(deleteButton);
+
     sidebar.appendChild(listItem);
   });
 
