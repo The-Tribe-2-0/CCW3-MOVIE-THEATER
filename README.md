@@ -27,7 +27,7 @@ cd animal-voting-app
 npm install
 3. Start the application.
 npm start
-This will start the server and you can view the app by navigating to http://localhost:3000 in your web browser.
+This will start the server and you can view the app by navigating to http://localhost:3000/films in your web browser.
 
 ## How to Use
 To use this page, simply open the index.html file in a web browser. You can interact with the list of available movies in the sidebar by clicking on each movie title. The movie cards in the main content section display information about each movie.
