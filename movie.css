@@ -111,36 +111,49 @@
       box-shadow: 0 20px 25px rgba(230, 213, 236, 0.863);
     }
     
-    .card-img-top {
+    .card .poster {
       width: 100%;
       height: auto;
-      object-fit: cover;
+      object-fit: fill;
     }
     
-    .card-title{
+    .card .title{
       font-size: 20px;
       font-weight: bold;
       margin: 10px 0;
       color: #F1E3E4;
     }
     
-    .card-text {
+    .card .description {
       font-size: 14px;
       color: #C44900;
       margin-bottom: 10px;
+      font-weight: bold;
     }
-  
-    .btn-primary {
+    .card .showtime {
+    font-size: 14px;
+    font-weight: bold;
+    color: #F1E3E4;
+    margin-bottom: 5px;
+
+    }
+    .card .tickets {
+    font-size: 14px;
+    font-weight: bold;
+    color: #C44900;
+    margin-top: 5px;
+    }
+    .btn {
       display: inline-flex;
       padding: 10px 30px;
       background-color: #422040;
       color: #fff;
       border-radius: 5px;
-      margin: 20px 20px 20px 20px;
+      margin: 10px 20px 20px 20px;
       border-color: #200320;
     }
   
-    .btn-primary:hover {
+    .btn:hover {
       background-color: #0c0414;
       border-color: #470a96;
     }
