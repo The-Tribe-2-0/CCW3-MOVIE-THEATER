@@ -98,8 +98,6 @@
   .wrapper .main_content{
     width: 100%;
     margin-left: 200px;
-    height: 100%;
-    overflow-y: scroll;
   }
   
   .wrapper .main_content .header{
