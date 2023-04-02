@@ -22,6 +22,7 @@
   .wrapper{
     display: flex;
     position: relative;
+    height: 100vh;
   }
   
   .wrapper .sidebar{
@@ -31,18 +32,23 @@
     padding: 30px 0px;
     position: fixed;
     border-right: 1px solid #e0e4e8;
+    overflow-y: scroll; 
   }
   
-  .wrapper .sidebar h2{
-    color: #F1E3E4;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
+  .wrapper .sidebar .logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    display: inline-block;
+    margin: 10px 20px;
   }
-  .wrapper .sidebar h2 span {
-    color: #fff;
-    text-transform: uppercase;
-
+  
+  .wrapper .sidebar .logo .flat {
+    color: #ffffff;
+  }
+  
+  .wrapper .sidebar .logo .dango {
+    color: #C44900;
   }
   
   .wrapper .sidebar ul li{
@@ -72,13 +78,24 @@
   .wrapper .main_content{
     width: 100%;
     margin-left: 200px;
+    height: 100%;
+    overflow-y: scroll;
   }
   
   .wrapper .main_content .header{
     padding: 20px;
-    background: #000000;
+    background: #110111;
     color: #C44900;
     border-bottom: 1px solid #e0e4e8;
+    font-size: 24px;
+  }
+
+  .wrapper .main_content .header h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #edddf7;
+      padding: 15px;
+      font-style: italic;
+      font-size: 18px;
   }
   
   .wrapper .main_content .info{
@@ -97,6 +114,7 @@
       flex-wrap: wrap;
       margin: 20px;
       gap: 20px;
+      overflow-y: scroll; 
     }
     
     .card {

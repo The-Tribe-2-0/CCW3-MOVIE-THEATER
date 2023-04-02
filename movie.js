@@ -2,6 +2,22 @@
 fetch('http://localhost:3000/films')
   .then(response => response.json())
   .then(data => {
+  const sidebar = document.querySelector('.sidebar ul');
+  sidebar.innerHTML = '';
+
+  //Loop through the data and create a list item for each movie
+  data.forEach(movie => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('film', 'item');
+
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = movie.title;
+    listItem.appendChild(link);
+
+    sidebar.appendChild(listItem);
+  });
+
     const container = document.querySelector('.container');
 
     // Loop through the data and create a card for each movie
@@ -41,7 +57,26 @@ fetch('http://localhost:3000/films')
       const button = document.createElement('a');
       button.classList.add('btn');
       button.href = movie.link;
-      button.textContent = 'Book Now';
+      if (movie.capacity - movie.tickets_sold <= 0) {
+        button.textContent = 'Sold Out';
+        button.disabled = true; // disable the button
+      } else {
+        button.textContent = 'Book Now';
+        button.addEventListener('click', event => {
+          event.preventDefault(); // prevent the default link behavior
+          if (movie.tickets_sold >= movie.capacity) {
+            // all tickets sold out, disable the button
+            button.textContent = 'Sold Out';
+            button.disabled = true;
+            return;
+          }
+          // increment the tickets sold for this movie
+          movie.tickets_sold++;
+          // update the tickets available text
+          const ticketsAvailable = movie.capacity - movie.tickets_sold;
+          tickets.textContent = `Tickets Available: ${ticketsAvailable > 0 ? ticketsAvailable : 0}`;
+        });
+      }
       cardBody.appendChild(button);
 
       card.appendChild(cardBody);
