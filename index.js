@@ -14,8 +14,10 @@ fetch('http://localhost:3000/films')
     link.href = '#';
     link.textContent = movie.title;
     listItem.appendChild(link);
+    method: 'DELETE'
 
     const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete');
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', () => {
       // Remove the film from the server

@@ -4,6 +4,9 @@
 ## Description
 This is a static web page for a movie theater called Flatdango. The page consists of two parts: a sidebar and a main content section. The sidebar contains the theater logo and a list of available movies. The main content section displays movie information and movie cards.
 
+## Live Link
+
+
 ## Technologies Used
 It uses the following technologies:
 1. Node.js
